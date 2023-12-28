@@ -1,4 +1,4 @@
-nome = str(input('Qual o seu nome: ')).strip
+nome = str(input('Qual o seu nome: ')).strip()
 
 if nome == 'Gustavo':
     print('Que nome lindo você tem!!')
