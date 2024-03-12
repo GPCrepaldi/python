@@ -1,22 +1,22 @@
-num = int(input('Digite um valor: '))
-soma = num
-contador = 1
-maior = menor = num
-escolha = str(input('Quer continuar?(S ou N): ')).strip().upper()
+resposta = 'S'
+soma = quantidade = media = maior = menor = 0
 
-while escolha == 'S':
-    num = int(input('Digite mais um valor: '))
-    if num > maior:
-        maior = num
+while resposta in 'Ss':
+    numero = int(input('Digite um número: '))
+    soma += numero
+    quantidade += 1
+    if quantidade == 1:
+        maior = menor = numero
     else:
-        menor = num
-    soma += num
-    contador += 1
-    media = soma / contador
-    escolha = str(input('Você quer continuar?(S ou N): ')).strip().upper()
+        if numero > maior:
+            maior = numero
+        if numero < menor:
+            menor = numero
+    resposta = str(input('Quer Continuar [S / N]: ')).strip().upper() [0]
+media = soma / quantidade
 
 print('='*25)
-print(f'Você digitou {contador} numeros!')
+print(f'Você digitou {quantidade} numeros!')
 print(f'A media entre eles é de: {media}')
 print(f'O maior valor é: {maior}')
 print(f'O menor valor é: {menor}')
