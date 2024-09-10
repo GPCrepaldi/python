@@ -1,9 +1,20 @@
-extenso = ('zero', 'um', 'dois', 'tres', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez', 'onze', 'doze', 'treze', 'quatorze', 'quinze', 'dezesseis', 'dezessete', 'dezoito', 'dezenove', 'vinte')
+extenso = ('zero', 'um', 'dois', 'tres', 'quatro', 'cinco',
+            'seis', 'sete', 'oito', 'nove', 'dez', 'onze',
+            'doze', 'treze', 'quatorze', 'quinze', 'dezesseis',
+            'dezessete', 'dezoito', 'dezenove', 'vinte')
 
-num = int(input('Digite um numero entre 0 e 20: '))
+while True:
+    while True:
+        num = int(input('\nDigite um número entre 0 e 20: '))
+        if 0 <= num <= 20:
+            break
+        print('Tente novamente. ', end=' ')
 
-while num < 0 or num > 20:
-    num = int(input('Valor inválido... Digite um numero entre 0 e 20: '))
+    print(f'Você digitou o número: {extenso[num]}')
 
-if num >= 0 and num <= 20:
-    print(f'Você digitou o número "{extenso[num]}"')
+    resp = str(input('\nVocê quer continuar?[S/N] ')).lower()
+    if resp == 'n':
+        print('Obrigado!!')
+        break
+    while resp != 's':
+        resp = str(input('Digite "s" ou "n"' ))
