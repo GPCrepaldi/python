@@ -1,9 +1,8 @@
 numeros = []
 
 for n in range(0, 5):
-    numeros.append(int(input('Digite o valor a ser adicionado: ')))
+    numeros.append(int(input(f'Digite o valor a ser adicionado na posição {n}: ')))
 print(numeros)
-
 
 print(f'\nO maior valor foi {max(numeros)} na posição(ões): ', end='')
 for i, valor in enumerate(numeros): #neste caso eu n pude usar o index, pq o index apenas retorno a primeira ocorrencia do valor
