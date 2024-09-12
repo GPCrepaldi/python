@@ -21,7 +21,7 @@ while resp == 'S':
         if resp == 'N':
             break
 
-print('-=' * 40)
+print('-=' * 30)
 
 #ordena e printa na tela
 lista.sort()
